@@ -1,6 +1,5 @@
 
-import { NativeModules } from 'react-native';
-
+import RNSecureKeyStore from './src/NativeRNSecureKeyStore';
 export const ACCESSIBLE = {
     WHEN_UNLOCKED: 'AccessibleWhenUnlocked',
     AFTER_FIRST_UNLOCK: 'AccessibleAfterFirstUnlock',
@@ -11,7 +10,5 @@ export const ACCESSIBLE = {
       'AccessibleAfterFirstUnlockThisDeviceOnly',
     ALWAYS_THIS_DEVICE_ONLY: 'AccessibleAlwaysThisDeviceOnly',
   };
-
-const { RNSecureKeyStore } = NativeModules;
 
 export default RNSecureKeyStore;

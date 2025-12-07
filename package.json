@@ -1,21 +1,33 @@
 {
-  "name": "react-native-secure-key-store",
-  "version": "2.0.10",
-  "description": "React Native Library for securely storing keys to iOS and Android devices in KeyChain and KeyStore respectively.",
+  "name": "@react-native-ohos/react-native-secure-key-store",
+  "version": "2.0.10-rc.1",
+  "description": "React Native Library for securely storing keys to iOS, Android and HarmonyOS devices in KeyChain, KeyStore and HUKS respectively.",
   "main": "index.js",
   "publishConfig": { 
     "registry": "https://registry.npmjs.org" 
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name secure_key_store --cpp-output-path ./harmony/secure_key_store/src/main/cpp/generated --ets-output-path ./harmony/secure_key_store/src/main/ets/generated --turbo-modules-spec-paths ./src"
   },
+  "devDependencies": {
+  "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+  "@react-native-community/cli": "11.4.1"
+},
+"overrides": {
+  "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+  "@react-native-community/cli": "11.4.1"
+},
   "types": "index.d.ts",
   "keywords": [
     "react-native",
     "ios",
     "android",
+    "harmonyos",
+    "openharmony",
     "KeyChain service",
     "KeyStore service",
+    "HUKS",
     "Device Security"
   ],
   "author": "pradeep singh",
@@ -30,5 +42,9 @@
   "bugs": {
     "url": "https://github.com/pradeep1991singh/react-native-secure-key-store/issues"
   },
-  "homepage": "https://github.com/pradeep1991singh/react-native-secure-key-store#readme"
+  "homepage": "https://github.com/pradeep1991singh/react-native-secure-key-store#readme",
+  "harmony": {
+    "alias": "react-native-secure-key-store",
+    "codegenConfig": {}
+  }
 }
