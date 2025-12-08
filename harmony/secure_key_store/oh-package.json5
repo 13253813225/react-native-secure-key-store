@@ -1,5 +1,5 @@
 {
-  "name": "secure_key_store",
+  "name": "@react-native-ohos/react-native-secure-key-store",
   "version": "1.0.0",
   "description": "React Native Secure Key Store for HarmonyOS",
   "main": "src/main/ets/index.ets",
@@ -19,7 +19,7 @@
     "@rnoh/react-native-openharmony": ">=0.72.38"
   },
   "harmony": {
-    "alias": "secure_key_store",
+    "alias": "@react-native-ohos/react-native-secure-key-store",
     "codegenConfig": {
       "specPath": "./src/main/ets"
     }
