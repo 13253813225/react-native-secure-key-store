@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "secure_key_store",
+    "type": "har",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ]
+  }
+}

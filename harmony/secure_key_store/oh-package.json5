@@ -1,0 +1,27 @@
+{
+  "name": "@react-native-ohos/react-native-secure-key-store",
+  "version": "2.0.10",
+  "description": "React Native Secure Key Store for HarmonyOS",
+  "main": "src/main/ets/index.ets",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "0.72.38"
+  },
+  "devDependencies": {},
+  "ohos": {
+    "org": "react-native-oh-library",
+    "name": "react-native-secure-key-store",
+    "version": "2.0.10",
+    "license": "ISC"
+  },
+  "peerDependencies": {
+    "@rnoh/react-native-openharmony": ">=0.72.38"
+  },
+  "harmony": {
+    "alias": "@react-native-ohos/react-native-secure-key-store",
+    "codegenConfig": {
+      "specPath": "./src/main/ets"
+    }
+  }
+}
