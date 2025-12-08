@@ -1,5 +1,12 @@
 
-import RNSecureKeyStore from './src/NativeRNSecureKeyStore';
+import { NativeModules } from 'react-native';
+
+const isTurboModuleEnabled = global.__turboModuleProxy != null;
+
+const RNSecureKeyStore = isTurboModuleEnabled
+  ? require('./src/NativeRNSecureKeyStore').default
+  : NativeModules.RNSecureKeyStore;
+
 export const ACCESSIBLE = {
     WHEN_UNLOCKED: 'AccessibleWhenUnlocked',
     AFTER_FIRST_UNLOCK: 'AccessibleAfterFirstUnlock',
@@ -10,5 +17,6 @@ export const ACCESSIBLE = {
       'AccessibleAfterFirstUnlockThisDeviceOnly',
     ALWAYS_THIS_DEVICE_ONLY: 'AccessibleAlwaysThisDeviceOnly',
   };
+
 
 export default RNSecureKeyStore;
